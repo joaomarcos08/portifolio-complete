@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    {% block head %}
+        <title>João Marcos</title>
+    {% endblock %}
+
+
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <div class="links">
+            <a href="/">Sobre</a>
+            <a href="/portifolio">Aulas</a> 
+        </div>           
+    </header>  
+
+    {% block content %}{% endblock %}
+
+</body>
+</html>
