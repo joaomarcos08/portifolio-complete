@@ -17,15 +17,20 @@ nunjucks.configure('views', {
 
 server.get('/',function(req, res){
     const about = {
-        avatar_url: "https://clipartart.com/images/naruto-chibi-clipart.jpg",
-        name:"João marcos",
-        role:"Estudante-Pitagoras",
+        avatar_url: "https://imgur.com/akSv6AB.png",
+        avatar1_url: "https://imgur.com/pauolrL.png",
+        avatar2_url: "https://imgur.com/xqS53ir.png",
+        name:"Mashi",
         description:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem est officia, harum, fuga culpa unde ea eius non fugit nisi soluta nostrum. Consequatur mollitia, laudantium atque delectus aperiam deserunt quas.",
-        links: [
-            {name:"Github", url:"" },
-            {name:"Twitter", url:"" },
-            {name:"Linkedin", url:"" },
-        ]
+        name2:"Haen",
+        description2:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem est officia, harum, fuga culpa unde ea eius non fugit nisi soluta nostrum. Consequatur mollitia, laudantium atque delectus aperiam deserunt quas.",
+        
+        
+        // links: [
+        //     {name:"Github", url:"" },
+        //     {name:"Twitter", url:"" },
+        //     {name:"Linkedin", url:"" },
+        // ]
     }
 
     return res.render('about', { about })

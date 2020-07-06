@@ -2,40 +2,69 @@
 
 {% block head %}
 
-<title>Portifolio - João Marcos</title>
+    <title>Haen e Mashi</title>
 
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 {% endblock %}
 
 {% block content %}
-    
+
     <div id="wrapper">
-        <h1>Aulas</h1>
+        <h1>Surprises</h1>
     </div>
 
     <section class="cards">
 
         {% for item in items %}
-        <div class="card" id="{{item.id}}">
-            <div class="card__image-container {{'featured-wrapper' if item.featureds}}">
-                <img src="https://img.yoUtube.com/vi/{{item.id}}/maxresdefault.jpg" alt="Imagem de {{item.title}}">
-                {% if item.featured %}
-                    <div class="featured">Featured</div>
-                {% endif %}
+            <div class="card" id="{{item.id}}">
+                <div class="card__image-container {{'featured-wrapper' if item.featureds}}">
+                    <img src="https://img.yoUtube.com/vi/{{item.id}}/0.jpg" alt="Imagem de {{item.title}}">
+                    {% if item.featured %}
+                        <div class="featured">Featured</div>
+                    {% endif %}
+                </div>
+                <div class="card__content">
+                    <p>{{item.title}}</p>
+                </div>
+                <div class="card__info">
+                    {# <p>{{item.duration}}</p>
+                <p class="card__price">{{item.price}}</p> #}
+                </div>
             </div>
-            <div class="card__content">
-                <p>{{item.title}}</p>
-            </div>
-            <div class="card__info">
-                <p>{{item.duration}}</p>
-                <p class="card__price">{{item.price}}</p>
-            </div>
-        </div>
         {% endfor %}
     </section>
-    
+
+    <section class="cards">
+        <div class="card" id="">
+            <div class="card__image-container {{'featured-wrapper' if item.featureds}}">
+                <img src="https://imgur.com/1NU2kkD.png" alt="">
+            </div>
+            <div class="card__content">
+                <p>Erased- Satoru and Kayo.</p>
+                <p>Primero desenho dedicado, após assistir ao anime Erased.</p>
+            </div>
+            <div class="card__info">
+                {# <p>{{item.duration}}</p>
+                <p class="card__price">{{item.price}}</p> #}
+            </div>
+        </div>
+
+        <div class="card" id="">
+            <div class="card__image-container {{'featured-wrapper' if item.featureds}}">
+                <img src="https://imgur.com/jiCUa5o.png" alt="">
+            </div>
+            <div class="card__content">
+                <p>Party - Bananya </p>
+                <p>Desenho em comemoração ao ano novo com um tema divertido.</p>
+            </div>
+            <div class="card__info">
+                {# <p>{{item.duration}}</p>
+                <p class="card__price">{{item.price}}</p> #}
+            </div>
+        </div>
+    </section>
+
     <script src="scripts.js"></script>
 
-    {% endblock %}
+{% endblock %}
